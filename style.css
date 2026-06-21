@@ -72,10 +72,15 @@ body {
 /* PRODUCTS */
 .products {
   display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   padding: 30px;
+  overflow-x: auto;   /* enables horizontal scroll */
+  scroll-behavior: smooth;
+}
+
+/* hide scrollbar (optional clean look) */
+.products::-webkit-scrollbar {
+  display: none;
 }
 
 /* PRODUCT CARD */
@@ -87,6 +92,8 @@ body {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  flex: 0 0 auto;   /* keeps cards in horizontal row */
 }
 
 /* HOVER EFFECT */
