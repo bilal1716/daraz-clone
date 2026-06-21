@@ -72,28 +72,23 @@ body {
 /* PRODUCTS */
 .products {
   display: flex;
+  flex-wrap: nowrap;      /* IMPORTANT: stops wrapping */
   gap: 20px;
   padding: 30px;
-  overflow-x: auto;   /* enables horizontal scroll */
+  overflow-x: auto;       /* enables horizontal scroll */
   scroll-behavior: smooth;
-}
-
-/* hide scrollbar (optional clean look) */
-.products::-webkit-scrollbar {
-  display: none;
 }
 
 /* PRODUCT CARD */
 .card {
   background: white;
   width: 200px;
+  flex: 0 0 auto;   /* prevents shrinking + keeps row layout */
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  flex: 0 0 auto;   /* keeps cards in horizontal row */
 }
 
 /* HOVER EFFECT */
